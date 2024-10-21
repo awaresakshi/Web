@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        h1 {
+            color: #0f0c0c;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        form {
+            background-color: palevioletred;
+            text-align: center;
+            border: 3px solid black;
+
+            border-radius: 10px;
+            border-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            margin-left: 30%;
+            margin-right: 30%;
+            box-shadow: 0 0 4px 4px gray;
+
+            margin-top: 5%;
+
+        }
+        button{
+            padding:  3px;
+            margin-bottom: 2%;
+            border-radius: 4px;
+            border: 2px solid black;
+        }
+        button:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <br>
+    <form>
+        <h1>
+            <b>Registration Form For ACES</b>
+
+        </h1>
+        <br>
+
+        Student Name:<input type="text" id="n1"><br><br>
+       
+        Password:<input type="password" id="p1"><br><br>
+        
+        Address:
+        <br>
+        <textarea name="address" id="n3" cols="15" rows="3"></textarea>
+        <br><br>
+        Amount:  <input type="number">
+        <br><br>
+        Upload pic of Receipt:<input type="file" id="n4"><br><br>
+        
+        
+        Select Class:
+
+        <select name="b1" id="b1">
+            <option value="CLASS">B.Tech</option>
+            <option value="CLASS">TY</option>
+            <option value="CLASS">SY</option>
+            <option value="CLASS">FY</option>
+        </select>
+        <br><br>
+        Gender:
+        Male <input type="radio" name="gender">
+
+        female <input type="radio" name="gender" value="F">
+        <br><br>
+
+
+        <button type="submit" onclick="reg()">Submit</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+    <script>
+        function reg() {
+            var name1 = document.getElementById("n1").value;
+          
+            var name3 = document.getElementById("p1").value;
+          
+            var name4 = document.getElementById("n3").value;
+            var name5 = document.getElementById("n4").value;
+            if (name1 == "") {
+                alert('enter ur name');
+            }
+           
+            else if (name3 == "") {
+                alert("enter ur password");
+            }
+           
+            else if (name4 == "") {
+                alert('enter ur addresss ');
+            }
+            else if (name5== "") {
+                alert("upload the  pic");
+            }
+            else{
+                alert('You Register Successfully!');
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
